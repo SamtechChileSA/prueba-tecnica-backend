@@ -6,16 +6,17 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = 5005;
+// const PORT = 5005;
 
 // Datos en memoria
 let users = [
   { id: 1, name: "Juan Pérez", email: "juan@test.com" },
   { id: 2, name: "María Gómez", email: "maria@test.com" },
   { id: 3, name: "Carlos López", email: "carlos@test.com" },
+  { id: 3, name: "Carlos López", email: "carlos@test.com" },
 ];
 
-const adminUser = { email: "admin@test.com", password: "123456" };
+const adminUser = { email: "admin@test.com", password: "13456" };
 
 // Rutas
 
@@ -30,11 +31,11 @@ app.post("/login", (req, res) => {
 
 // Obtener usuarios
 app.get("/users", (req, res) => {
-  res.json(users);
+  res.json(users[1]);
 });
 
 // Crear usuario
-app.post("/users", (req, res) => {
+app.post("/user", (req, res) => {
   const { name, email } = req.body;
   const newUser = { id: users.length + 1, name, email };
   users.push(newUser);
