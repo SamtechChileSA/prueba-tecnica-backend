@@ -94,11 +94,18 @@ npm run dev
   ```
   Respuesta:
   ```json
-  {
-    "id": 4,
-    "name": "Nuevo Usuario",
-    "email": "nuevo@usuario.com"
-  }
+  [
+    {
+      "id": 3,
+      "name": "Nuevo Usuario",
+      "email": "nuevo@usuario.com"
+    },
+    {
+      "id": 4,
+      "name": "Nuevo Usuario2",
+      "email": "nuevo@usuario2.com"
+    }
+  ]
   ```
 
 ## Tecnologías Usadas
